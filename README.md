@@ -31,7 +31,7 @@ cd ET-SAM
 ```
 ### Models
 We provide ET-SAM checkpoints trained with the SAM ViT-L backbone, including both the jointly trained model and fine-tuned models for downstream tasks. 
-All weights are available at [OneDrive](https://1drv.ms/f/c/f8f1dd7c4d15b330/IgARTBUDWf7EQZ81IuEJl720AXv8yvu1cx2Q-s3M0KOfu4k?e=VuPV2C).
+All weights are available at [OneDrive](https://1drv.ms/f/c/f8f1dd7c4d15b330/IgARTBUDWf7EQZ81IuEJl720ARNYheXTQ4HKwIwOHqiAG2s?e=AqljXP).
 These checkpoints only contain the ET-SAM components, i.e., the image encoder adapter, point decoder, and HM-Decoder. 
 Therefore, the frozen ViT image encoder weights must be loaded from the original [ViT-L SAM backbone](https://dl.fbaipublicfiles.com/segment_anything/sam_vit_l_0b3195.pth).
 

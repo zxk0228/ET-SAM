@@ -52,7 +52,7 @@ def train(args, load_data_func, train_epoch_func, is_joint_train=True):
     lr_scheduler = torch.optim.lr_scheduler.StepLR(optimizer, args.lr_drop_epoch)
 
     # 加载断点
-    if args.checkpoint is not None and is_joint_train:
+    if args.checkpoint is not None and args.continue_training:
         with open(args.checkpoint, "rb") as f:
             state_dict = torch.load(f, weights_only=True)
         optimizer.load_state_dict(state_dict['optimizer'])
@@ -233,6 +233,7 @@ def get_args():
 
     # checkpoint & paths
     parser.add_argument('--checkpoint', type=str)
+    parser.add_argument('--continue_training', action='store_true', default=False)
     parser.add_argument('--output_path', type=str, default="checkpoints/joint_train.pth")
     parser.add_argument('--dataset_dir', type=str, default="../datasets")
     parser.add_argument(

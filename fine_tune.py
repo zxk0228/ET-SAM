@@ -82,5 +82,5 @@ def train_epoch_ft(model, data, device):
 
 if __name__ == "__main__":
     args = get_args()
-    train(args, load_data_ft, train_epoch_ft, is_joint_train=False)
+    train(args, load_data_ft, train_epoch_ft)
 
