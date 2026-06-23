@@ -238,14 +238,14 @@ def log_output(image_num, point_num, point_threshold):
     max_memory = torch.cuda.max_memory_allocated() / 1024 ** 3
     total_time = 0
     print("===========Inference finished.===========")
-    print(f"Image number: {image_num}\n",
-          f"Point threshold: {point_threshold}\n")
-    print("Average inference latency:")
+    print(f"Image number: {image_num}\n"
+          f"Point threshold: {point_threshold}\n"
+          "Average inference latency:")
     for key, value in GLOBAL_TIMER.items():
         print(f'-{key}: {value / image_num:.5f}s')
         total_time += value
-    print(f"-total: {total_time / image_num:.5f}s\n",
-          f"Average prompt points number: {point_num / image_num:.2f}",
+    print(f"-total: {total_time / image_num:.5f}s\n"
+          f"Average prompt points number: {point_num / image_num:.2f}\n"
           f"Max memory usage: {max_memory:.2f}GB")
 
 def main(args):
