@@ -28,7 +28,7 @@ def initial(args):
     torch.backends.cudnn.deterministic = True
 
 
-def train(args, load_data_func, train_epoch_func, is_joint_train=True):
+def train(args, load_data_func, train_epoch_func):
     initial(args)
     
     # 构建模型
