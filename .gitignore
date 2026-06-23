@@ -1,0 +1,25 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+
+# PyCharm
+.idea/
+
+# OS
+.DS_Store
+
+# logs & outputs
+outputs/
+runs/
+logs/
+
+# model checkpoints（一般不上传）
+checkpoints/
+
+# datasets（通常太大）
+datasets/
+
+# virtual env
+venv/
+.env
